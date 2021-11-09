@@ -9,7 +9,7 @@ import { SignIn } from "../screens/SignIn";
 import { theme } from "../styles/theme";
 
 export type RootStackParamList = {
-  Profile: undefined;
+  Profile: { token?: string };
   SignIn: undefined;
 };
 

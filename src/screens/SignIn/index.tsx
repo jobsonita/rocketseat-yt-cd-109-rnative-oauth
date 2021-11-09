@@ -1,6 +1,8 @@
 import React from "react";
 import { View } from "react-native";
 
+import * as AuthSession from "expo-auth-session";
+
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 
@@ -10,6 +12,9 @@ import { SignInContent } from "../../components/SignInContent";
 import { RootStackParamList } from "../../routes";
 
 import { styles } from "./styles";
+
+const { CLIENT_ID } = process.env;
+const { REDIRECT_URI } = process.env;
 
 type AuthResponse = {
   type: string;
@@ -24,7 +29,18 @@ export function SignIn() {
   const navigation = useNavigation<ProfileScreenProp>();
 
   async function handleSignIn() {
-    navigation.navigate("Profile");
+    const RESPONSE_TYPE = "token";
+    const SCOPE = encodeURI("profile email");
+
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
+
+    const { type, params } = (await AuthSession.startAsync({
+      authUrl,
+    })) as AuthResponse;
+
+    if (type === "success") {
+      navigation.navigate("Profile", { token: params.access_token });
+    }
   }
 
   return (

@@ -12,7 +12,7 @@ A mobile App experimenting Google's OAuth, applying the instructions available a
 
 ## :hammer: Status
 
-> :construction: Ongoing :wrench:
+> :white_check_mark: Finished :lock:
 
 ## :bookmark: Content Table
 <!--ts-->
@@ -23,6 +23,10 @@ A mobile App experimenting Google's OAuth, applying the instructions available a
 <!--te-->
 
 ## :newspaper: App Interface
+
+<p align="center">
+  <video src="https://i.imgur.com/U9a9qni.mp4" width="240px" controls autoplay>
+</p>
 
 <details>
   <summary>Sign in screen</summary>
@@ -47,7 +51,7 @@ A mobile App experimenting Google's OAuth, applying the instructions available a
 
 ### :wrench: Prerequisites
 
-Before starting, make sure you have [Git](https://git-scm.com/), [Node](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed. Also, install [Expo Go](https://expo.dev/client) on your phone (or install an [Android emulator](https://developer.android.com/studio/) following [these instructions](https://react-native.rocketseat.dev/android/emulador/)) and create an Expo account.
+Before starting, make sure you have [Git](https://git-scm.com/), [Node](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed. Also, install [Expo Go](https://expo.dev/client) on your phone (or install an [Android emulator](https://developer.android.com/studio/) following [these instructions](https://react-native.rocketseat.dev/android/emulador/)) and create an Expo account. We'll be following [Expo's authentication guide](https://docs.expo.dev/guides/authentication/#google).
 
 ### :inbox_tray: Install and run
 
@@ -71,9 +75,9 @@ expo start
 
 ### :mag: Testing
 
-With the app running, read the QR generated code on your phone.
+With the app running, read the generated QR code on your phone or select the option to run on Android emulator.
 
-> **Notice:** in order for Google OAuth authentication to work properly, you need to configure your Google OAuth app (:construction: WIP, will link to the appropriate documentation).<!--'s homepage URL and authorization callback URL to `https://auth.expo.io/@<username>/rocketseat-yt-cd-109-rnative-oauth`, where `<username>` is your username in Expo (you need to create an Expo account). (update the `GOOGLE_APP_ID` and `GOOGLE_APP_SECRET`) in case you're creating a new app on Google OAuth. -->
+> **Notice:** in order for Google OAuth to work properly, you need to configure your [GCP (Google Cloud Platform) app](https://console.developers.google.com/)'s authorized URI origin to `https://auth.expo.io` and authorized redirect URI to `https://auth.expo.io/@<username>/<your_scheme>`, where `<username>` is your username in Expo (you need to create an Expo account) and `<your_scheme>` is the scheme you set in app.json. Create a `.env` file with the same content as `.env.example` (update the `CLIENT_ID` and `REDIRECT_URI`) in case you're creating a new app on GCP.
 
 ## :memo: Author and License
 

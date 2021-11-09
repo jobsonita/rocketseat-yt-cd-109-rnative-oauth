@@ -2,6 +2,7 @@
   "expo": {
     "name": "rocketseat-yt-cd-109-rnative-oauth",
     "slug": "rocketseat-yt-cd-109-rnative-oauth",
+    "scheme": "rocketseat-yt-cd-109-rnative-oauth",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
