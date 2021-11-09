@@ -24,8 +24,14 @@ A mobile App experimenting Google's OAuth, applying the instructions available a
 
 ## :newspaper: App Interface
 
-:construction: WIP
-<!--<p align="center"><img alt="Current interface of the app" title="Current interface of the app" src="./.github/current_interface.gif" width="250px"/></p>-->
+<details>
+  <summary>Sign in screen</summary>
+  <p align="center"><img alt="Sign in screen" title="Sign in screen" src="https://i.imgur.com/9CLsXBi.png" width="250px"/></p>
+</details>
+<details>
+  <summary>Profile screen</summary>
+  <p align="center"><img alt="Sign in screen" title="Sign in screen" src="https://i.imgur.com/lfTpC6K.png" width="250px"/></p>
+</details>
 
 ## :books: Technologies
 
